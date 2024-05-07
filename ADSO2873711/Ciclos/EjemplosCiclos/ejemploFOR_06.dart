@@ -3,7 +3,7 @@ import 'dart:io';
 void main(List<String> args) {
   /*
   Pedir al usuario n notas ingresadas por el usuario. Si el promedio es mayor a 3,
-  decir que el estudiante aprobó el trimestre, sino que indique que reprobó
+  decir que el estudiante aprobó el trimestre, sino que indique que reprobó.
   */
     int nota, suma =0, numNotas;
   double promedio =0;
@@ -16,7 +16,7 @@ void main(List<String> args) {
   promedio = suma / numNotas;
 }
   print("El promedio de la notas es: $promedio");
-  if(promedio >3) {
+  if(promedio > 3) {
   print("Usted APROBÓ");
 }
   else{
