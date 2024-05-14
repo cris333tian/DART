@@ -12,4 +12,5 @@ void main(List<String> args) {
   Adultos Mayores       60 en adelante
   Se debe solicitar la edad y el peso de cada persona y calcular y mostrar el promedio por categoría.
   */
+  
   }

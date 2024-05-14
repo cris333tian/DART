@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(List<String> args) {
   // Cristian Álvarez - CICLO FOR
   // EJERCICIO 08
@@ -7,4 +9,11 @@ void main(List<String> args) {
   multiplicación de todos los números que están desde el 1 hasta el N = 1 * 2 * 3 * ..... (N-2) * (N-1) * N,
   como se muestra en la figura, por definición el factorial de 0 es 1.
   */
+  int numero, factorial = 1;
+  print("Ingrese número para calcular el factorial");
+  numero = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= numero; i++) {
+    factorial = factorial * i;
+  }
+  print("El factorial de $numero es $factorial");
   }
