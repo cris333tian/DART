@@ -7,9 +7,11 @@ void main(List<String> args) {
   Al cerrar un expendio de naranjas, 15 clientes recibirán un 15% de descuento si compran más de 10 kilos.
   Determinar cuánto pagará cada cliente y cuanto percibirá la tienda por esas compras.
   */
+  //DECLARACION VARIABLES
   List<double> compras = [];
   double descuento = 0, totalPagar = 0, kilosNaranja, precioNeto;
 
+  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS.
   for(int i = 1; i <= 15; i++){
     print("Cliente #$i ingrese la cantidad de naranjas en kilos");
     kilosNaranja = double.parse(stdin.readLineSync()!);

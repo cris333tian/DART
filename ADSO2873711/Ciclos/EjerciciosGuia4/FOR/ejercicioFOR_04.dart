@@ -7,11 +7,12 @@ void main(List<String> args) {
   Suponga que se tiene un conjunto de calificaciones de un grupo de 40 alumnos.
   Realizar un algoritmo para calcular la calificación promedio y la calificación más baja de todo el grupo.
   */
+  
+  //DECLARACION VARIABLES
   List<double> calificaciones = [];
-
   double calificacion, promedio = 0;
   
-
+  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS.
   for (int i = 0; i < 40; i++) {
     print("Ingrese la calificación del alumno ${i + 1}: ");
     calificacion = double.parse(stdin.readLineSync()!);

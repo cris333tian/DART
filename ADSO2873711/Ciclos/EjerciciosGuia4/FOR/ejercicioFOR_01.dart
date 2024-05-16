@@ -4,7 +4,11 @@ void main(List<String> args) {
   // Cristian Álvarez - CICLO FOR
   // EJERCICIO 01
   /* Calcular el promedio de un alumno que tiene 7 calificaciones en la materia de Diseño Estructurado de Algoritmos. */
+
+  //DECLARACION VARIABLES
   double promedio, calificacion, sumaNotas = 0;
+  
+  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS. 
   for (int i = 0; i < 7; i++) {
     int x = i + 1;
     print("Ingrese la nota $x");
