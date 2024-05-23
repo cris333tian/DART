@@ -14,5 +14,5 @@ void main(List<String> args) {
   //DECLARACION VARIABLES
   
   //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS
-
+  double num;
 }
