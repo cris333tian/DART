@@ -11,31 +11,34 @@ void main(List<String> args) {
   El programa debe preguntar si se desea continuar ingresando datos.
   */
   //DECLARACION VARIABLES
-  double porcentajeFavor, porcentajeContra;
-  int contContra = 0, contFavor = 0, totalVotos = 0;
-  String? opcion, opcionTratado;
+  int contador = 0;
+  double porcentajeFavor, porcentajeEnContra, porcentajeAbstenciones, 
+         totalVotos = 0;
 
-  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS
+  //ENTRADA DATOS - PROCESOS - FORMULAS
   do {
-    print("Sr. diputado está a favor del Tratado? (F) (C)");
-    opcionTratado = stdin.readLineSync();
-    if (opcionTratado!.toUpperCase() == "F") {
-      contFavor++;
-      totalVotos++;
-    } else if (opcionTratado.toUpperCase() == "C") {
-      contContra++;
-      totalVotos++;
+    print("Ingrese el porcentaje de votos a favor");
+    porcentajeFavor = double.parse(stdin.readLineSync()!);
+    print("Ingrese el porcentaje de votos en contra");
+    porcentajeEnContra = double.parse(stdin.readLineSync()!);
+    print("Ingrese el porcentaje de votos en abstenciones");
+    porcentajeAbstenciones = double.parse(stdin.readLineSync()!);
+    totalVotos = porcentajeFavor + porcentajeEnContra + porcentajeAbstenciones;
+    if (totalVotos > 0) {
+      porcentajeFavor = (porcentajeFavor / totalVotos) * 100;
+      porcentajeEnContra = (porcentajeEnContra / totalVotos) * 100;
+      porcentajeAbstenciones = (porcentajeAbstenciones / totalVotos) * 100;
     } else {
-      print("Voto no valido");
+      porcentajeFavor = 0;
+      porcentajeEnContra = 0;
+      porcentajeAbstenciones = 0;
     }
-    print("Hasta el momento van $totalVotos votOs");
-    print("¿Desea ingresar otro diputado? (SI) (NO)");
-    opcion = stdin.readLineSync();
-    print('*' * 30);
-  } while (opcion!.toLowerCase() != "NO");
-  porcentajeFavor = (contFavor * 100) / totalVotos;
-  porcentajeContra = (contContra * 100) / totalVotos;
-  print("El porcentaje de votos a favor es: $porcentajeFavor");
-  print("El porcentaje de votos en contra es: $porcentajeContra");
-  print("El total de votos es: $totalVotos");
+
+    //SALIDA DATOS
+    print("El porcentaje de votos a favor es: $porcentajeFavor%");
+    print("El porcentaje de votos en contra es: $porcentajeEnContra%");
+    print(
+        "El porcentaje de votos en abstenciones es: $porcentajeAbstenciones%");
+    contador++;
+  } while (contador < 1);
 }

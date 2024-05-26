@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(List<String> args) {
   // Cristian Álvarez - CICLO DOWHILE
   // EJERCICIO 06
@@ -8,7 +10,33 @@ void main(List<String> args) {
   Suponga que los alumnos tienen diferentes promedios.
   */
   //DECLARACION VARIABLES
-  
-  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS
+  int numControl=0, cantEstudiantes, contador=0;
+  double calificacion, promedio, poromedioM=0, sumaCalifi=0;
+  print("Cuántos estudiantes hay en el curso");
+    cantEstudiantes=int.parse(stdin.readLineSync()!);
 
+  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS.
+   do {
+    print("Estudiantes #${contador + 1}");
+    sumaCalifi = 0;
+    for(int i = 0; i < 5; i++){
+      print("nota ${i + 1}");
+      calificacion = double.parse(stdin.readLineSync()!);
+      sumaCalifi += calificacion;
+        while(calificacion<0 || calificacion>5){
+        print("Nota INCORRECTA, ingrese de nuevo la nota");
+        calificacion = double.parse(stdin.readLineSync()!);
+        }
+    }
+    promedio = sumaCalifi / 5;
+    if(promedio > poromedioM){
+      poromedioM = promedio;
+      numControl = contador + 1;
+      print("Hasta el momento, el mayor promedio es de: $poromedioM");
+    }
+    print('*' * 50);
+    contador++;
+  } while (contador < cantEstudiantes);
+  print("El promedio mayor es de: $poromedioM");
+  print("El numero de el mejor estudiantes es: $numControl");
 }
