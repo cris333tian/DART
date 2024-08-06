@@ -10,6 +10,26 @@ class Vehiculo {
     //    this.velocidad = velocidad;
     //    this.tamanio = tamanio;
     
+    //Método SET y GET
+    //Setea o asigna un nuevo valor para el atributo color
+    void setColor(String newColor){
+        this.color = newColor;
+    }
+    //Permite obtener el valor atributo color
+    String getColor(){
+        return this.color;
+    }
+
+
+    void getVelocidad(String velocidad){
+        this.velocidad = velocidad;
+    }
+    //Permite obtener el valor atributo color
+    String setVelocidad(){
+        return this.velocidad;
+    }
+
+
     //Metodo avanzar
     void avanzar(int velAvanz) {
         this.velocidad = this.velocidad + velAvanz;
