@@ -6,7 +6,10 @@ void main(List<String> args) {
     print("El auto es de color ${myCar.getColor()}");
     myCar.setColor("Amarillo");
     print("El auto cambió a color ${myCar.getColor()}");
-    myCar.setVelocidad("100KM/H");
-    print("El auto va en una velocidad de ${velocidad.getVelocidad()}");
+
+    print("El auto va en una velocidad de ${myCar.getVelocidad()}");
+    myCar.setVelocidad("333");
+    print("El auto cambió a una velocidad de ${myCar.getVelocidad()}");
+
 
 }

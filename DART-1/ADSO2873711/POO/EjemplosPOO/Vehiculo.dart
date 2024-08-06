@@ -21,13 +21,14 @@ class Vehiculo {
     }
 
 
-    void getVelocidad(String velocidad){
-        this.velocidad = velocidad;
+    void setVelocidad(int newVelocidad){
+        this.velocidad = newVelocidad;
     }
-    //Permite obtener el valor atributo color
-    String setVelocidad(){
+    //Permite obtener el valor atributo velocidad
+    int getVelocidad(){
         return this.velocidad;
     }
+
 
 
     //Metodo avanzar
