@@ -13,7 +13,7 @@ void main(List<String> args) {
     print("¿Cuántos empleados hay?");
     cantidadEmpleados = int.parse(stdin.readLineSync()!);
 
-    for (var i = 0 i < cantidadEmpleados; i++) {
+    for (var i = 0; i < cantidadEmpleados; i++) {
         print("Ingrese el nombre del empleado ${i + 1}");
         nombreEmpleado = stdin.readLineSync()!;
         print("Ingrese la edad del empleado ${i + 1}");
